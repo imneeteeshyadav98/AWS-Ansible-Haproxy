@@ -1,0 +1,52 @@
+- hosts: localhost
+  tasks:
+  - name: Ec2 instance 1
+    ec2:
+      key_name: "awskey111222"
+      instance_type: "t2.micro"
+      image: "ami-0a780d5bac870126a"
+      wait: yes
+      count: 1
+      vpc_subnet_id: "subnet-90b882f8"
+      assign_public_ip: yes
+      region: "ap-south-1"
+      state: present
+      group_id: "sg-0261a80ac31a91c30"
+      aws_access_key: "AKIAXLWIU6D4QM25SD5K"
+      aws_secret_key: "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"
+- hosts: localhost
+  tasks:
+  - name: Ec2 instance 2
+    ec2:
+      key_name: "awskey111222"
+      instance_type: "t2.micro"
+      image: "ami-0a780d5bac870126a"
+      wait: yes
+      count: 1
+      vpc_subnet_id: "subnet-90b882f8"
+      assign_public_ip: yes
+      region: "ap-south-1"
+      state: present
+      group_id: "sg-0261a80ac31a91c30"
+      aws_access_key: "AKIAXLWIU6D4QM25SD5K"
+      aws_secret_key: "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"
+
+  
+- hosts: localhost
+  tasks:
+  - name: ec2 instance 3
+    ec2:
+      key_name: "awskey111222"
+      instance_type: "t2.micro"
+      image: "ami-0a780d5bac870126a"
+      wait: yes
+      count: 1
+      vpc_subnet_id: "subnet-90b882f8"
+      assign_public_ip: yes
+      region: "ap-south-1"
+      state: present
+      group_id: "sg-0261a80ac31a91c30"
+      aws_access_key: "AKIAXLWIU6D4QM25SD5K"
+      aws_secret_key: "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"
+
+  

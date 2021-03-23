@@ -1,0 +1,12 @@
+- hosts: ec2
+  tasks:
+  - name: "Install Httpd server"
+    package:
+      name: "httpd"
+      state: present
+  - copy:
+      content: "this is Ec2 instance"
+      dest: "/var/www/html/lw.html"
+  - service:
+      name: "httpd"
+      state:  started
